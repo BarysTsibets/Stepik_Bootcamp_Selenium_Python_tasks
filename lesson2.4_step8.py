@@ -39,6 +39,7 @@ try:
     input_field.send_keys(result)
     button = driver.find_element_by_id('solve')
     button.click()
+    # Finnaly block
 finally:
     time.sleep(8)
     driver.quit()
