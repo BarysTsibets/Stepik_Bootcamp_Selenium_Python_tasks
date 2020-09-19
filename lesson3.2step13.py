@@ -8,9 +8,10 @@ PATH = r'C:\Users\BorisPC\PycharmProjects\untitled\HelloWorld\Automation\driver\
 class TestTraining(unittest.TestCase):
     def test_link1(self):
         link = "http://suninjuly.github.io/registration1.html"
+        # Run Chrome
         driver = webdriver.Chrome(executable_path=PATH)
         driver.get(link)
-
+        # Filing registration form
         f_name = driver.find_element_by_css_selector(
             'div.form-group.first_class>input[placeholder="Input your first name"]')
         f_name.send_keys("Ivan")
@@ -24,16 +25,18 @@ class TestTraining(unittest.TestCase):
         button.click()
         time.sleep(1)
         welcome_text = driver.find_element_by_tag_name("h1").text
+        # Check that we see next message 'Congratulations! You have successfully registered!'
         self.assertEqual("Congratulations! You have successfully registered!", welcome_text,
                          f"{welcome_text} must be == 'Congratulations! You have successfully registered!'")
         time.sleep(2)
         driver.quit()
 
     def test_link2(self):
+        # Run Chrome
         link = "http://suninjuly.github.io/registration2.html"
         driver = webdriver.Chrome(executable_path=PATH)
         driver.get(link)
-
+        # Filing registration form
         f_name = driver.find_element_by_css_selector(
             'div.form-group.first_class>input[placeholder="Input your first name"]')
         f_name.send_keys("Ivan")
@@ -47,6 +50,7 @@ class TestTraining(unittest.TestCase):
         button.click()
         time.sleep(1)
         welcome_text = driver.find_element_by_tag_name("h1").text
+        # Check that we see next message 'Congratulations! You have successfully registered!'
         self.assertEqual("Congratulations! You have successfully registered!", welcome_text,
                          f"{welcome_text} must be == 'Congratulations! You have successfully registered!'")
         time.sleep(2)
