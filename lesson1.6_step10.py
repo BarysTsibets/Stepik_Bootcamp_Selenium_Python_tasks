@@ -3,7 +3,7 @@ import time
 PATH = r'C:\Users\BorisPC\PycharmProjects\untitled\HelloWorld\Automation\driver\chromedriver.exe'
 
 try:
-    link = "http://suninjuly.github.io/registration2.html"
+    link = "http://suninjuly.github.io/registration1.html"
 
     driver = webdriver.Chrome(executable_path=PATH)
     driver.get(link)
