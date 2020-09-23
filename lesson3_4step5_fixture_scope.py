@@ -6,6 +6,7 @@ PATH = r'C:\Users\BorisPC\PycharmProjects\untitled\HelloWorld\Automation\driver\
 
 
 @pytest.fixture(scope="class")
+# Browser will be open/closed  1 time for class
 def browser():
     print("\nstart browser for test..")
     browser = webdriver.Chrome(executable_path=PATH)
@@ -16,7 +17,7 @@ def browser():
 
 class TestMainPage1():
 
-    # here we drop fixture as argument 
+    # here we drop fixture as argument
     def test_guest_should_see_login_link(self, browser):
         print("start test1")
         browser.get(link)
