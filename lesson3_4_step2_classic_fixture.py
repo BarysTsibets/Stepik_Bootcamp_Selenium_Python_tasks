@@ -47,3 +47,4 @@ class TestMainPage2():
         self.browser.get(link)
         self.browser.find_element_by_css_selector(".basket-mini .btn-group > a")
         print(4)
+        #end
